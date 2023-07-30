@@ -1,0 +1,83 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+.container {
+    perspective: 800px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .text {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    color: #ffffff;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.3s, color 0.3s;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .container:hover .text {
+    transform: translateZ(50px) rotateX(20deg);
+    color: #ff9900;
+  }
+  
+  .text:active {
+    transform: translateZ(30px) scale(0.9);
+  }
+  
+
+
+  .container {
+    perspective: 800px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .text {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    padding: 20px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center center;
+    animation: rotateAnimation 6s linear infinite, neonAnimation 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes rotateAnimation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+  
+  @keyframes neonAnimation {
+    0% {
+      color: #2bff00;
+      text-shadow: 0 0 10px #2bff00, 0 0 20px #2bff00, 0 0 30px #2bff00, 0 0 40px #2bff00, 0 0 70px #2bff00, 0 0 80px #2bff00;
+    }
+    100% {
+      color: #ffb8b8;
+      text-shadow: none;
+    }
+  }
+  
+  
